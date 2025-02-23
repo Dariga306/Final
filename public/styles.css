@@ -1,0 +1,173 @@
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background: rgb(182, 2, 198); 
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover, nav a:active {
+    background: rgb(249, 40, 165);
+    padding: 10px 15px; 
+    border-radius: 10px;
+}
+
+
+#logout {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#logout:hover {
+    background-color: #cc0000;
+}
+
+.container {
+    width: 40%;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-top: 120px; 
+    transition: transform 0.1s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h1 {
+    margin-top: 120px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+#map {
+    height: 400px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: rgb(182, 2, 198);
+    box-shadow: 0px 0px 10px rgba(182, 2, 198, 0.5);
+    outline: none;
+}
+
+.submit-btn {
+    background: linear-gradient(45deg, rgb(182, 2, 198), rgb(201, 53, 255));
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(45deg, rgb(249, 40, 165), rgb(182, 2, 198));
+    transform: scale(1.05);
+}
+
+.home-buttons {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px; 
+}
+
+.home-buttons .btn {
+    width: 250px; 
+    text-align: center; 
+    background: rgb(182, 2, 198);
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.home-buttons .btn:hover {
+    background: linear-gradient(45deg, rgb(249, 40, 165), rgb(182, 2, 198));
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    nav a, #logout {
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .home-buttons .btn {
+        width: 200px;
+    }
+}

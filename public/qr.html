@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="weather.html">Weather</a>
+        <a href="bmi.html">BMI</a>
+        <a href="email.html">Email</a>
+        <a href="qr.html">QR Code</a>
+        <button id="logout">Logout</button>
+    </nav>
+    <div class="container">
+        <h2>QR Code Generator</h2>
+        <form id="qr-form">
+            <input type="text" id="url-input" placeholder="Enter URL here" required>
+            <button type="submit" class="submit-btn">Generate QR Code</button>
+        </form>
+        <div id="qr-container">
+            <p>QR Code will appear here</p>
+        </div>
+    </div>
+    <script src="qr.js"></script>
+    <script>
+        document.getElementById("logout")?.addEventListener("click", () => {
+            localStorage.removeItem("token");
+            window.location.href = "register.html";
+        });
+    </script>
+</body>
+</html>

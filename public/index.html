@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="home-buttons">
+        <h1>Dariga final 🫶🏻</h1>
+        <a href="blog.html" class="btn">Blog</a>
+        <a href="weather.html" class="btn">Weather API App</a>
+        <a href="bmi.html" class="btn">BMI Calculator</a>
+        <a href="email.html" class="btn">Email Sender</a>
+        <a href="qr.html" class="btn">QR Code Generator</a>
+        <button id="logout">Logout</button>
+    </div>
+
+    <script>
+        document.getElementById("logout")?.addEventListener("click", () => {
+            localStorage.removeItem("token");
+            window.location.href = "register.html";
+        });
+
+        if (!localStorage.getItem("token")) {
+            window.location.href = "register.html";
+        }
+    </script>
+</body>
+</html>
